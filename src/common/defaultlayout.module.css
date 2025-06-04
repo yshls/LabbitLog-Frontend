@@ -1,0 +1,12 @@
+.defaultlayout {
+  max-width: 700px;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+}
+.customToast {
+  background: 'rgba(0, 0, 0, 0.6)';
+  color: '#fff';
+  padding: '12px 16px';
+  border-radius: '50px';
+}

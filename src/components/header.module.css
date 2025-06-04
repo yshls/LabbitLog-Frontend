@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  border-right: 1px solid #eee;
+  justify-content: flex-start; /* 위쪽 정렬 유지 */
+}
+
+.logo img {
+  margin-bottom: auto; /* 로고는 맨 위 */
+  width: 70px;
+  display: block;
+  margin-left: -12px; /* 조정값은 이미지에 따라 다름 */
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center; /* 메뉴는 중앙 정렬 */
+  flex: 1;
+}
+
+.menuBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.topRight {
+  position: fixed; /* 오른쪽 상단 고정 */
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav a {
+  text-decoration: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 정확히 정중앙 */
+  max-width: 700px;
+  width: 90%;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 2rem;
+  z-index: 1000;
+}
+.overlay {
+  position: fixed;
+  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0; 동일 의미 */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* 모달보다 낮거나 동일해야 겹치지 않음 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar svg {
+  display: block; /* inline-block → block으로 변경 */
+  margin: auto; /* 가운데 정렬 */
+
+  width: 30px;
+  height: 30px;
+  box-sizing: content-box;
+  padding: 0.5rem;
+  color: #bdbdbd;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* display: block + margin: auto는 가장 깔끔한 가운데 정렬 방식 */
+
+.sidebar svg:hover {
+  background-color: #fba32fa5;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.loginBtn,
+.logoutBtn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  color: #3aae2d;
+  background-color: #a5d0a034;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.loginBtn:hover,
+.logoutBtn:hover {
+  background-color: #3aae2d;
+  color: #fff;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.active svg {
+  color: #fba12f;
+  background-color: #fff;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  color: #fba12f;
+
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
